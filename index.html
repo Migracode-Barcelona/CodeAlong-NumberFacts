@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+      integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      #fact {
+        display: none;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 10px;
+        margin-left: -1em;
+      }
+      .grid-item {
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        text-align: center;
+      }
+    </style>
+
+    <title>Number Facts</title>
+    <!--  -->
+  </head>
+  <body class="bg-dark grid-container">
+    <!-- For Random -->
+    <div class="container grid-item">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card bg-primary text-white mt-5 p-4">
+            <h1>Random Facts</h1>
+            <p>Enter a number and get a random fact</p>
+            <input
+              type="number"
+              class="form-control form-control-lg"
+              id="numberInput1"
+              placeholder="Enter any number..."
+            />
+            <div id="fact1" class="card-body">
+              <h4 class="card-title">Random Fact</h4>
+              <p id="factText1" class="card-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- For Dates -->
+    <div class="container grid-item">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card bg-primary text-white mt-5 p-4">
+            <h1>Date Facts</h1>
+            <p>Enter a number and get a random date fact</p>
+            <input
+              type="number"
+              class="form-control form-control-lg"
+              id="numberInput2"
+              placeholder="Enter any number..."
+            />
+            <div id="fact2" class="card-body">
+              <h4 class="card-title">Date Fact</h4>
+              <p id="factText2" class="card-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- For Numbers -->
+    <div class="container grid-item">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card bg-primary text-white mt-5 p-4">
+            <h1>Number Facts</h1>
+            <p>Enter a number and get a random fact</p>
+            <input
+              type="number"
+              class="form-control form-control-lg"
+              id="numberInput3"
+              placeholder="Enter any number..."
+            />
+            <div id="fact3" class="card-body">
+              <h4 class="card-title">Number Fact</h4>
+              <p id="factText3" class="card-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- For Trivia -->
+    <div class="container grid-item">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card bg-primary text-white mt-5 p-4">
+            <h1>Number Trivia Facts</h1>
+            <p>Enter a number and get a random Trivia fact</p>
+            <input
+              type="number"
+              class="form-control form-control-lg"
+              id="numberInput4"
+              placeholder="Enter any number..."
+            />
+            <div id="fact4" class="card-body">
+              <h4 class="card-title">Trivia Fact</h4>
+              <p id="factText4" class="card-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loading javascript code -->
+    <script src="numberLogic.js"></script>
+  </body>
+</html>
