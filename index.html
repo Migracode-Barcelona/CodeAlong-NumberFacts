@@ -37,22 +37,38 @@ let fact=document.querySelector('#facts') ;
 let factText=document.querySelector('#factText') ;
 let numberInput= document.querySelector('#numberInput');
 // using Ajax
-numberInput.addEventListener('input',getFactAjax);
-function getFactAjax(){
-   let number = numberInput.value;
+numberInput.addEventListener('input',getFactFetch);
+// function getFactAjax(){
+//    let number = numberInput.value;
 
-   let xhr = new XMLHttpRequest();
-   xhr.open('GET','http://numbersapi.com/'+ number);
+//    let xhr = new XMLHttpRequest();
+//    xhr.open('GET','http://numbersapi.com/'+ number);
 
 
-   xhr.onload = function(){
-if(this.status ==200 && number !=''){
+//    xhr.onload = function(){
+// if(this.status ==200 && number !=''){
+//     facts.style.display = 'block';
+//     factText.innerHTML=this.responseText;
+// }
+//    }
+//    xhr.send();
+// }
+ function getFactFetch(){
+     let number = numberInput.value;
+
+     fetch('http://numbersapi.com/'+ number)
+     .then(Response => Response.text())
+     .then(data =>{
+if(number != ''){
     facts.style.display = 'block';
-    factText.innerHTML=this.responseText;
+ factText.innerHTML=data;
 }
-   }
-   xhr.send();
-}
+     })
+     .catch(err => console.log(err)
+
+     )
+ }
+ 
  </script>
 </body>
 </html>
