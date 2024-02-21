@@ -23,6 +23,7 @@ input.addEventListener("input", getFactFetch);
 
 function getFactFetch() {
   let number = input.value;
+  pFact.textContent = "";
 
   fetch("http://numbersapi.com/" + number)
     .then((Response) => Response.text())
@@ -34,3 +35,21 @@ function getFactFetch() {
     })
     .catch("Error is: ", Error);
 }
+
+const obj = {};
+const arr = [];
+function getFetch2() {
+  fetch("http://numbersapi.com/")
+    .then((Response) => Response.text())
+    .then((data) => {
+      arr.push(data);
+      return arr;
+    })
+    .catch((error) => {
+      console.log(error, "error happened during fetch");
+    });
+}
+
+getFetch2().then((result) => {
+  console.log(result);
+});
