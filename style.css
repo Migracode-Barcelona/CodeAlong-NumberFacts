@@ -1,0 +1,15 @@
+#first-div{
+    background-color: steelblue;
+    width: 400px;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 10px;
+}
+
+#h3{
+    display: none;
+}
+#fact-p{
+    padding-bottom: 15px;
+}
+
