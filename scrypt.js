@@ -17,6 +17,7 @@ function getFactFetch(){
             }
         })
         .catch(err => console.log(err));
+        
 }
 
 
